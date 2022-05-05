@@ -29,7 +29,7 @@ class CustomShowView: UIView {
     private func commonInit(){
         //we 're going to do stuff here
         Bundle.main.loadNibNamed("CustomShowView", owner: self, options: nil)
-        guard let view = UINib(nibName: "CustomShowView", bundle: Bundle.main).instantiate(withOwner: nil, options: nil).first as? UIView else {
+        guard let view = UINib(nibName: "CustomShowView", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as? UIView else {
             return
         }
         addSubview(view)
