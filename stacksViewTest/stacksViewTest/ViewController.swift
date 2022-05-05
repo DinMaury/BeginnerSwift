@@ -45,6 +45,12 @@ class ViewController: UIViewController {
     
     //Fuction after load
     override func viewDidAppear(_ animated: Bool) {
+        // Informacion Inicial
+        imgShowBig.image = .init(named: showBigImg.first ?? "")
+        labelReference.text = labelReferenceShow.first
+        labelPrice.text = "$ \(labelPriceShow[0])"
+        labelNameShoe.text = showName.first
+        posShoes = 1
         // Buttons Scroll View
         buttonsCustom2.forEach { item in
             stackViewToShoes.addArrangedSubview(item)
