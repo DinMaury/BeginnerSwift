@@ -57,81 +57,46 @@
                                         <rect key="frame" x="0.0" y="466.5" width="414" height="120"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-ev-Lrm">
-                                                <rect key="frame" x="0.0" y="0.0" width="2530" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="680" height="120"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ap8-zC-MLI">
-                                                        <rect key="frame" x="20" y="20" width="2490" height="80"/>
+                                                        <rect key="frame" x="20" y="20" width="640" height="80"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJA-w8-CMd" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="B2Y-m5-k9W"/>
+                                                                </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="586-kg-Acv" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
-                                                                <rect key="frame" x="250" y="0.0" width="240" height="80"/>
+                                                                <rect key="frame" x="130" y="0.0" width="120" height="80"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="K7x-Yv-g3W"/>
+                                                                </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2t-y4-Rb6" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
-                                                                <rect key="frame" x="500" y="0.0" width="240" height="80"/>
+                                                                <rect key="frame" x="260" y="0.0" width="120" height="80"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="Lzl-Ls-LSw"/>
+                                                                </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-Mg-3YG" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
-                                                                <rect key="frame" x="750" y="0.0" width="240" height="80"/>
+                                                                <rect key="frame" x="390" y="0.0" width="120" height="80"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="46n-3l-k9F"/>
+                                                                </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVp-jX-DK7" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
-                                                                <rect key="frame" x="1000" y="0.0" width="240" height="80"/>
+                                                                <rect key="frame" x="520" y="0.0" width="120" height="80"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="T7r-hk-MFh"/>
+                                                                </constraints>
                                                             </view>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPG-nh-I6x">
-                                                                <rect key="frame" x="1250" y="0.0" width="240" height="80"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <backgroundConfiguration key="background" image="shoes1"/>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="clicShoes1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sjM-Ml-lEV"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqg-DG-8QN">
-                                                                <rect key="frame" x="1500" y="0.0" width="240" height="80"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <backgroundConfiguration key="background" image="shoes2"/>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="clicChuks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ca4-VF-peM"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-Lq-iop">
-                                                                <rect key="frame" x="1750" y="0.0" width="240" height="80"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <backgroundConfiguration key="background" image="shoes3"/>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="clicShoes2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVl-Et-bwi"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-MW-o8E">
-                                                                <rect key="frame" x="2000" y="0.0" width="240" height="80"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <backgroundConfiguration key="background" image="shoes4"/>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="clicShoes3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBA-Hr-AeQ"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcY-v1-NFx">
-                                                                <rect key="frame" x="2250" y="0.0" width="240" height="80"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <backgroundConfiguration key="background" image="shoes5"/>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="clicShoes4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6a-Wy-iSE"/>
-                                                                </connections>
-                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -264,62 +229,38 @@
                                             <stackView opaque="NO" contentMode="left" semanticContentAttribute="playback" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IX3-be-iCL">
                                                 <rect key="frame" x="102" y="0.0" width="210" height="45"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjs-Td-gLl">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-gx-qL1" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="ChP-Hi-TlE"/>
-                                                            <constraint firstAttribute="height" constant="45" id="hdR-Ea-ccU"/>
+                                                            <constraint firstAttribute="width" constant="45" id="48l-F6-ggK"/>
+                                                            <constraint firstAttribute="height" constant="45" id="94m-ET-exe"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background" image="1"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="clicToWhatsapp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fao-Cn-sIE"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRz-Nc-SPT">
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0c-Xg-pi8" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
                                                         <rect key="frame" x="55" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="YxA-3C-pDy"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="pX5-RN-2wd"/>
+                                                            <constraint firstAttribute="width" constant="45" id="9w1-Tb-4ct"/>
+                                                            <constraint firstAttribute="height" constant="45" id="XFQ-xc-4Pb"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background" image="2"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="clicToFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ji2-T0-bAA"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-Tb-a8G">
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-SU-247" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
                                                         <rect key="frame" x="110" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="E2v-6b-VAA"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="gkC-dP-pKB"/>
+                                                            <constraint firstAttribute="height" constant="45" id="TDU-zr-ujs"/>
+                                                            <constraint firstAttribute="width" constant="45" id="zCU-54-Fxu"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background" image="3"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="clicToInstagram:" destination="BYZ-38-t0r" eventType="touchUpInside" id="17b-Sq-pfd"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOu-Le-LRu">
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4I-bm-nRg" customClass="CustomShowView" customModule="stacksViewTest" customModuleProvider="target">
                                                         <rect key="frame" x="165" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="T8l-u6-or1"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="ug8-Ib-CGB"/>
+                                                            <constraint firstAttribute="width" constant="45" id="dTo-26-lRp"/>
+                                                            <constraint firstAttribute="height" constant="45" id="o4A-1Q-zeF"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background" image="4"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="clicToTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uk5-Vz-s85"/>
-                                                        </connections>
-                                                    </button>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -345,27 +286,22 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonShoes1" destination="CPG-nh-I6x" id="iR9-P7-IOx"/>
-                        <outlet property="buttonShoes2" destination="yqg-DG-8QN" id="z5C-BU-nQj"/>
-                        <outlet property="buttonShoes3" destination="tKP-Lq-iop" id="2Ay-TH-ftP"/>
-                        <outlet property="buttonShoes4" destination="6WR-MW-o8E" id="2ox-Bz-RPr"/>
-                        <outlet property="buttonShoes5" destination="DcY-v1-NFx" id="wpY-jU-95b"/>
                         <outlet property="imgShowBig" destination="aRE-3o-PfO" id="9DW-FE-4hf"/>
                         <outlet property="labelNameShoe" destination="dgM-pM-mbS" id="U2l-qx-sYn"/>
                         <outlet property="labelPrice" destination="HG1-hH-Is5" id="McN-lb-cVK"/>
                         <outlet property="labelReference" destination="FvU-uq-hV6" id="Iga-s6-Joo"/>
                         <outlet property="scrollShowHorizontal" destination="c9v-8y-lwd" id="GoQ-aI-ETp"/>
+                        <outlet property="stackViewSocial" destination="IX3-be-iCL" id="d9v-ak-Oyr"/>
                         <outlet property="stackViewToShoes" destination="Ap8-zC-MLI" id="Iy0-sV-L3N"/>
-                        <outletCollection property="buttons" destination="DcY-v1-NFx" collectionClass="NSMutableArray" id="YUo-o9-2Ym"/>
-                        <outletCollection property="buttons" destination="tKP-Lq-iop" collectionClass="NSMutableArray" id="LNb-yu-uxK"/>
-                        <outletCollection property="buttons" destination="6WR-MW-o8E" collectionClass="NSMutableArray" id="a5O-xo-NTT"/>
-                        <outletCollection property="buttons" destination="CPG-nh-I6x" collectionClass="NSMutableArray" id="awL-Ly-UJb"/>
-                        <outletCollection property="buttons" destination="yqg-DG-8QN" collectionClass="NSMutableArray" id="V2p-hx-dlB"/>
                         <outletCollection property="buttonsCustom2" destination="MJA-w8-CMd" collectionClass="NSMutableArray" id="axs-zo-S5c"/>
                         <outletCollection property="buttonsCustom2" destination="586-kg-Acv" collectionClass="NSMutableArray" id="b80-zk-ZPH"/>
                         <outletCollection property="buttonsCustom2" destination="V2t-y4-Rb6" collectionClass="NSMutableArray" id="PXy-LJ-v7X"/>
                         <outletCollection property="buttonsCustom2" destination="bKd-Mg-3YG" collectionClass="NSMutableArray" id="uc0-qf-Xrw"/>
                         <outletCollection property="buttonsCustom2" destination="RVp-jX-DK7" collectionClass="NSMutableArray" id="G0N-gk-Vaw"/>
+                        <outletCollection property="buttonsSocial" destination="LdD-gx-qL1" collectionClass="NSMutableArray" id="JYl-1Q-K7v"/>
+                        <outletCollection property="buttonsSocial" destination="L0c-Xg-pi8" collectionClass="NSMutableArray" id="8ST-zA-Ebr"/>
+                        <outletCollection property="buttonsSocial" destination="wdu-SU-247" collectionClass="NSMutableArray" id="fMi-7g-t6b"/>
+                        <outletCollection property="buttonsSocial" destination="r4I-bm-nRg" collectionClass="NSMutableArray" id="Iha-Q2-p3W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -374,16 +310,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="512" height="512"/>
-        <image name="2" width="512" height="512"/>
-        <image name="3" width="512" height="512"/>
-        <image name="4" width="512" height="512"/>
         <image name="chucks" width="640" height="472"/>
-        <image name="shoes1" width="100" height="100"/>
-        <image name="shoes2" width="100" height="100"/>
-        <image name="shoes3" width="100" height="100"/>
-        <image name="shoes4" width="100" height="100"/>
-        <image name="shoes5" width="100" height="100"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
