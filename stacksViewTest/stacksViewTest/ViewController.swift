@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var buttons: [UIButton]!
     
-    @IBOutlet var buttonsCustom2: [ButtonShow2]!
+    @IBOutlet var buttonsCustom2: [CustomShowView]!
     
     var buttonsCustom: [ButtonShow] = [
         .init(),

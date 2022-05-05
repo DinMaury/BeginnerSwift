@@ -7,9 +7,8 @@
 
 import UIKit
 
-class ButtonShow2: UIView {
+class CustomShowView: UIView {
     
-    @IBOutlet var contentView: UIView!
     @IBOutlet weak var imgView: UIImageView!
     
     @IBOutlet weak var buttonView: UIButton!
@@ -30,7 +29,11 @@ class ButtonShow2: UIView {
     private func commonInit(){
         //we 're going to do stuff here
         Bundle.main.loadNibNamed("CustomShowView", owner: self, options: nil)
-        contentView.fixInView(self)
+        guard let view = UINib(nibName: "CustomShowView", bundle: Bundle.main).instantiate(withOwner: nil, options: nil).first as? UIView else {
+            return
+        }
+        addSubview(view)
+        view.fixInView(self)
     }
     
     // MARK: --------------
@@ -48,7 +51,6 @@ class ButtonShow2: UIView {
 extension UIView {
     func fixInView(_ parentView: UIView) -> Void{
         translatesAutoresizingMaskIntoConstraints = false
-        parentView.addSubview(self)
         NSLayoutConstraint.activate([
             leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
             topAnchor.constraint(equalTo: parentView.topAnchor),
