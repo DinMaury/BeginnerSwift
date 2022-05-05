@@ -7,54 +7,6 @@
 
 import UIKit
 
-//class ButtonShow: UIView {
-//    
-//    private lazy var imageView = UIImageView()
-//    private lazy var button: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.addTarget(self, action: #selector(didTouch), for: .touchUpInside)
-//        return button
-//    }()
-//    
-//    var didTouchCallback: (() -> Void)?
-//    
-//    init() {
-//        super.init(frame: .zero)
-//        addSubViews()
-//        setupConstraints()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//    
-//    private func addSubViews() {
-//        addSubview(imageView)
-//        addSubview(button)
-//    }
-//    
-//    private func setupConstraints() { //Posicion de imagenes y botones
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-//        imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-//        imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-//        imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-//        
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.topAnchor.constraint(equalTo: topAnchor).isActive = true
-//        button.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-//        button.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-//        button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-//    }
-//    
-//    func setup(imageName: String) {
-//        imageView.image = .init(named: imageName)
-//    }
-//    
-//    @objc private func didTouch() {
-//        didTouchCallback?()
-//    }
-//}
 
 class ViewController: UIViewController {
 
@@ -76,27 +28,12 @@ class ViewController: UIViewController {
     
     @IBOutlet var buttonsSocial: [CustomShowView]!
     
-//    var buttonsCustom: [CustomShowView] = [
-//        .init(),
-//        .init(),
-//        .init(),
-//        .init(),
-//        .init()
-//    ]
-    
-//    var buttonSocial: [CustomShowView] = [
-//        .init(),
-//        .init(),
-//        .init(),
-//        .init(),
-//    ]
-    
     let labelPriceShow: [Double] = [78.00, 83.00, 57.00, 93.00, 62.00]
     let imgSocial: [String] = ["Whatsapp.png", "Facebook.png", "Instagram.png", "Twitter.png"]
     let labelReferenceShow: [String] = ["48372dg American Special", "482750id Limit Edition", "94725kd EU Special Edition", "24853jd Colombia Edition", "83452ej Panama Edition"]
     let showBigImg: [String] = ["chucks.png", "shoes1.png", "shoes3.png", "shoes4.png", "shoes5.png"]
     let showName: [String] = ["Chuck Taylor Shoes", "Name Shoes1", "Name Shoes2", "Name Shoes3", "Name Shoes4"]
-    var posShoes = 0 // posicion de la imagen que estoy mostrando
+    var posShoes = 0 // posicion de la imagen e informacion que muestro to shoes
     
     override func viewDidLoad() {
         super.viewDidLoad()
