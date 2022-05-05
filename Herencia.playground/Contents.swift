@@ -26,7 +26,7 @@ class SportCar: Vehicle {
         model = "3 Series"
     }
     override func drive(speedIncreanse: Double) {
-        print("hijo otra vez")
+        print("hijo otra vez 123")
         currentSpeed += speedIncreanse * 3
     }
 }
