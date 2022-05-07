@@ -12,13 +12,13 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="SwappingScreens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginVC" customModule="SwappingScreens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eLa-YI-ykn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-iV-yGi">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
@@ -165,13 +165,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11P-YK-PYr">
                                                 <rect key="frame" x="5" y="5" width="56" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                                <buttonConfiguration key="configuration" style="plain" title="Back">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                     </backgroundConfiguration>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Back"/>
-                                                    </attributedString>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -180,7 +177,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <constraints>
                                             <constraint firstItem="11P-YK-PYr" firstAttribute="leading" secondItem="6V2-eZ-shK" secondAttribute="leading" constant="5" id="65L-GB-Lh8"/>
                                             <constraint firstItem="11P-YK-PYr" firstAttribute="top" secondItem="6V2-eZ-shK" secondAttribute="top" constant="5" id="yHc-sm-h0v"/>
@@ -189,19 +185,24 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jo-Li-dtq">
                                         <rect key="frame" x="0.0" y="66" width="414" height="752"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load 3rd Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDK-nG-vLI">
-                                                <rect key="frame" x="0.0" y="366" width="414" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbZ-Np-a5t">
+                                                <rect key="frame" x="103.5" y="360.5" width="207" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Load 3rd Screen">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clicLoad3rdScreen:" destination="Q9l-72-Yiy" eventType="touchUpInside" id="yO2-Jj-zzC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="eDK-nG-vLI" firstAttribute="centerX" secondItem="1Jo-Li-dtq" secondAttribute="centerX" id="9j9-RA-H1k"/>
-                                            <constraint firstItem="eDK-nG-vLI" firstAttribute="centerY" secondItem="1Jo-Li-dtq" secondAttribute="centerY" id="bZT-n4-dGU"/>
-                                            <constraint firstAttribute="trailing" secondItem="eDK-nG-vLI" secondAttribute="trailing" id="vyI-yr-cZW"/>
-                                            <constraint firstItem="eDK-nG-vLI" firstAttribute="leading" secondItem="1Jo-Li-dtq" secondAttribute="leading" id="zbX-KN-Pwa"/>
+                                            <constraint firstItem="pbZ-Np-a5t" firstAttribute="centerY" secondItem="1Jo-Li-dtq" secondAttribute="centerY" id="Ujm-tt-wrt"/>
+                                            <constraint firstItem="pbZ-Np-a5t" firstAttribute="centerX" secondItem="1Jo-Li-dtq" secondAttribute="centerX" id="mr8-Vz-jPO"/>
+                                            <constraint firstItem="pbZ-Np-a5t" firstAttribute="width" secondItem="1Jo-Li-dtq" secondAttribute="width" multiplier="0.5" id="yKa-Vl-Ne6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -227,7 +228,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8y9-if-Wh6"/>
                     <connections>
-                        <segue destination="dDV-x8-pbk" kind="showDetail" id="jTS-QT-P4Q"/>
+                        <segue destination="dDV-x8-pbk" kind="showDetail" identifier="PlaySongVC" id="jTS-QT-P4Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgI-CD-cj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -245,24 +246,31 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-BR-d1q">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxF-D8-GE8">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxF-D8-GE8">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-BR-Rzp">
-                                                <rect key="frame" x="186" y="105" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-BR-Rzp">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5lU-BR-Rzp" firstAttribute="leading" secondItem="bxF-D8-GE8" secondAttribute="leading" id="216-iI-HGm"/>
+                                            <constraint firstAttribute="trailing" secondItem="5lU-BR-Rzp" secondAttribute="trailing" id="IpD-uc-8R5"/>
+                                            <constraint firstItem="5lU-BR-Rzp" firstAttribute="top" secondItem="bxF-D8-GE8" secondAttribute="top" constant="50" id="P9I-g3-qY5"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-2T-s38">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-2T-s38">
                                         <rect key="frame" x="0.0" y="758" width="414" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="eNx-2T-s38" firstAttribute="top" secondItem="VYE-BR-d1q" secondAttribute="top" constant="758" id="Mnt-jL-GFS"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YS6-OZ-inI"/>
@@ -274,6 +282,9 @@
                             <constraint firstItem="VYE-BR-d1q" firstAttribute="top" secondItem="YS6-OZ-inI" secondAttribute="top" id="pAT-e2-OCH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="songTitleLabel" destination="5lU-BR-Rzp" id="2C3-0Y-2jP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRs-i0-40I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,11 +304,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

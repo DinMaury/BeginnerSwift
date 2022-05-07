@@ -37,10 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        stackViewToShoes.arrangedSubviews.forEach {
-            $0.removeFromSuperview()
-            $0.isHidden = true
-        }
+        
     }
     
     //Fuction after load

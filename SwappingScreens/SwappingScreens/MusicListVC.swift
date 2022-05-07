@@ -18,6 +18,20 @@ class MusicListVC: UIViewController {
     @IBAction func clicBackButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func clicLoad3rdScreen(_ sender: Any) {
+        let songTitle = "Quit Play Games With My Heart"
+        performSegue(withIdentifier: "PlaySongVC", sender: songTitle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PlaySongVC {
+            
+            if let song = sender as? String {
+                destination.selectedSong = song
+            }
+            
+        }
+    }
     
     /*
     // MARK: - Navigation
