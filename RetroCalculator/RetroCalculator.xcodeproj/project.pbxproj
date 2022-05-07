@@ -15,6 +15,7 @@
 		366C6DCB28258CC9006059F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366C6DC928258CC9006059F8 /* LaunchScreen.storyboard */; };
 		366C6DD62825D36F006059F8 /* ButtonsShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C6DD42825D36F006059F8 /* ButtonsShowView.swift */; };
 		366C6DD72825D36F006059F8 /* ButtonsShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366C6DD52825D36F006059F8 /* ButtonsShowView.xib */; };
+		366C6DD92826CF35006059F8 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 366C6DD82826CF35006059F8 /* btn.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		366C6DCC28258CC9006059F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		366C6DD42825D36F006059F8 /* ButtonsShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsShowView.swift; sourceTree = "<group>"; };
 		366C6DD52825D36F006059F8 /* ButtonsShowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsShowView.xib; sourceTree = "<group>"; };
+		366C6DD82826CF35006059F8 /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		366C6DBD28258CC7006059F8 /* RetroCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				366C6DD82826CF35006059F8 /* btn.wav */,
 				366C6DBE28258CC7006059F8 /* AppDelegate.swift */,
 				366C6DC028258CC7006059F8 /* SceneDelegate.swift */,
 				366C6DC228258CC7006059F8 /* ViewController.swift */,
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366C6DD92826CF35006059F8 /* btn.wav in Resources */,
 				366C6DCB28258CC9006059F8 /* LaunchScreen.storyboard in Resources */,
 				366C6DC828258CC9006059F8 /* Assets.xcassets in Resources */,
 				366C6DC628258CC7006059F8 /* Main.storyboard in Resources */,
