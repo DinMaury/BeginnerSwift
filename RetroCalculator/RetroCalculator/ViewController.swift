@@ -65,7 +65,7 @@ class ViewController: UIViewController {
             var resultadoString: String = ""
             var operando: Double = 0
             var opCal: String = ""
-            
+            // Numbers buttons
             for j in 0..<10 {
                 buttonsShowView[j].didTouchCallback = {
                     self.playSound()

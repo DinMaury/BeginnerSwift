@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RetroCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="V3r-sy-b1E">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8SD-GC-xzo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzo-R4-GEx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="768"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-zv-bLt">
-                                                <rect key="frame" x="50" y="80" width="314" height="608"/>
+                                                <rect key="frame" x="50" y="80" width="328" height="638"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tie-wR-eB8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="70"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="L8K-or-Xfb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="314" height="70"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="70"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmK-vJ-Nju">
-                                                                <rect key="frame" x="15" y="0.0" width="284" height="70"/>
+                                                                <rect key="frame" x="15" y="0.0" width="298" height="70"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -54,81 +54,81 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b8-aP-Ccx">
-                                                        <rect key="frame" x="0.0" y="80" width="314" height="528"/>
+                                                        <rect key="frame" x="0.0" y="80" width="328" height="558"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpanel" translatesAutoresizingMaskIntoConstraints="NO" id="2FR-bd-UVE">
-                                                                <rect key="frame" x="0.0" y="0.0" width="314" height="528"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="558"/>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BYM-AV-qWQ">
-                                                                <rect key="frame" x="23.5" y="26.5" width="267" height="475"/>
+                                                                <rect key="frame" x="24.666666666666657" y="28" width="278.66666666666674" height="502"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-ch-xqX">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="87"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="278.66666666666669" height="92.333333333333329"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-Mr-BLu" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsg-16-EcO" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="92.5" y="0.0" width="82" height="87"/>
+                                                                                <rect key="frame" x="96.333333333333314" y="0.0" width="86" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4v-Vd-6qZ" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="184.5" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="192.33333333333331" y="0.0" width="86.333333333333314" height="92.333333333333329"/>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-NH-Q7B">
-                                                                        <rect key="frame" x="0.0" y="97" width="267" height="87"/>
+                                                                        <rect key="frame" x="0.0" y="102.33333333333331" width="278.66666666666669" height="92.333333333333314"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1q2-5u-o07" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0M-5Z-7OM" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="92.5" y="0.0" width="82" height="87"/>
+                                                                                <rect key="frame" x="96.333333333333314" y="0.0" width="86" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94r-g7-Psl" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="184.5" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="192.33333333333331" y="0.0" width="86.333333333333314" height="92.333333333333329"/>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S8O-Mi-YzZ">
-                                                                        <rect key="frame" x="0.0" y="194" width="267" height="87"/>
+                                                                        <rect key="frame" x="0.0" y="204.66666666666669" width="278.66666666666669" height="92.666666666666686"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugh-PB-3mZ" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="92.666666666666671"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy6-RD-LYG" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="92.5" y="0.0" width="82" height="87"/>
+                                                                                <rect key="frame" x="96.333333333333314" y="0.0" width="86" height="92.666666666666671"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTL-Ch-IEC" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="184.5" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="192.33333333333331" y="0.0" width="86.333333333333314" height="92.666666666666671"/>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-9x-3Ny">
-                                                                        <rect key="frame" x="0.0" y="291" width="267" height="87"/>
+                                                                        <rect key="frame" x="0.0" y="307.33333333333337" width="278.66666666666669" height="92.333333333333314"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oni-dP-xHt" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-mG-pet" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="92.5" y="0.0" width="82" height="87"/>
+                                                                                <rect key="frame" x="96.333333333333314" y="0.0" width="86" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-5C-gJT" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="184.5" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="192.33333333333331" y="0.0" width="86.333333333333314" height="92.333333333333329"/>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kii-2g-seY">
-                                                                        <rect key="frame" x="0.0" y="388" width="267" height="87"/>
+                                                                        <rect key="frame" x="0.0" y="409.66666666666663" width="278.66666666666669" height="92.333333333333314"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7F4-sp-9mj" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S67-kG-YvQ" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="92.5" y="0.0" width="82" height="87"/>
+                                                                                <rect key="frame" x="96.333333333333314" y="0.0" width="86" height="92.333333333333329"/>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woT-k3-mCX" customClass="ButtonsShowView" customModule="RetroCalculator" customModuleProvider="target">
-                                                                                <rect key="frame" x="184.5" y="0.0" width="82.5" height="87"/>
+                                                                                <rect key="frame" x="192.33333333333331" y="0.0" width="86.333333333333314" height="92.333333333333329"/>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
@@ -165,7 +165,7 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="1vV-yo-ZKh">
-                                        <rect key="frame" x="0.0" y="738" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="768" width="428" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="vWS-fX-rFi"/>
                                         </constraints>
