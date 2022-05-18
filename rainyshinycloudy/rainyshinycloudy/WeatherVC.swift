@@ -39,11 +39,9 @@ class WeatherVC: UIViewController,UITableViewDelegate,UITableViewDataSource, CLL
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
-        
         // Delegacion de tableView
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -87,7 +85,7 @@ class WeatherVC: UIViewController,UITableViewDelegate,UITableViewDataSource, CLL
             }
         }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            guard currentLocation == nil, let currentLocation = locations.last else { return }
+        guard currentLocation == nil, let currentLocation = locationManager.location else { return }
             
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
