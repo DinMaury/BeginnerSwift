@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Transformable"/>
+        <relationship name="toItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="toImage" inverseEntity="Item"/>
+        <relationship name="toStore" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stroe" inverseName="toImage" inverseEntity="Stroe"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="details" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toItem" inverseEntity="Image"/>
+        <relationship name="toItemType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemType" inverseName="toItem" inverseEntity="ItemType"/>
+        <relationship name="toStore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stroe" inverseName="toItem" inverseEntity="Stroe"/>
+    </entity>
+    <entity name="ItemType" representedClassName="ItemType" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="toItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="toItemType" inverseEntity="Item"/>
+    </entity>
+    <entity name="Stroe" representedClassName="Stroe" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toStore" inverseEntity="Image"/>
+        <relationship name="toItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="toStore" inverseEntity="Item"/>
+    </entity>
+    <elements>
+        <element name="Image" positionX="290.501708984375" positionY="-25.89822387695312" width="128" height="74"/>
+        <element name="Item" positionX="109.2077026367188" positionY="-227.7709655761719" width="128" height="134"/>
+        <element name="ItemType" positionX="-97.2847900390625" positionY="-201.84912109375" width="128" height="59"/>
+        <element name="Stroe" positionX="-74.41461181640625" positionY="-10.93365478515625" width="128" height="74"/>
+    </elements>
+</model>

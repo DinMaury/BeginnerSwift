@@ -199,7 +199,6 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
             
             filteredPokemon = pokemons.filter({$0.name!.range(of: lower) != nil })
             collection.reloadData()
-            
         }
     }
     //Function Vavigation Bar
