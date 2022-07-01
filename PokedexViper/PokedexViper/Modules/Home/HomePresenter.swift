@@ -14,8 +14,7 @@ protocol HomePresenterProtocol {
     var delegate: HomePresenterDelegate? { get set }
     
     func show() -> HomeViewController
-    func fetchPokemon()
-    
+    func fetchPokemon(offset: Int?)
 }
 
 //MARK: - Delegate
@@ -24,6 +23,7 @@ protocol HomePresenterDelegate: AnyObject {
     func showLoading()
     func hideLoading()
     func reloadData()
+    func reloadDataColletionView(indexPath: IndexPath)
     func showError(title: String, message: String)
 }
 
@@ -42,7 +42,8 @@ final class HomePresenter {
     init(router: HomeRouterProtocol, interactor: HomeInteractorProtocol) {
         self.router = router
         self.interactor = interactor
-    
+        
+        setupDataSource()
     }
 }
 
@@ -54,20 +55,13 @@ extension HomePresenter: HomePresenterProtocol {
         router.show(presenter: self)
     }
     
-    func setupDataSource() -> HomeDataSource {
-        
-        let dataSource = HomeDataSource()
-        
-        return dataSource
-    }
-    
-    func fetchPokemon() {
+    func fetchPokemon(offset: Int?) {
         
         delegate?.showLoading()
-        interactor.fetchPokemon { [weak self] pokemones in
+        interactor.fetchPokemon(offset: offset) { [weak self] pokemones in
             self?.delegate?.hideLoading()
             let pokemonesModel = pokemones.map({ PokemonModel($0)})
-            self?.dataSource.appendPOkemones(pokemonesModel)
+            self?.dataSource.appendPokemones(pokemonesModel)
             self?.delegate?.reloadData()
         }
     }
@@ -76,4 +70,17 @@ extension HomePresenter: HomePresenterProtocol {
 //MARK: - Private
 private extension HomePresenter {
     
+    func setupDataSource() {
+        
+        dataSource.pokemonTappedCompletion = { [unowned self] pokemon in
+            
+            self.router.showDetails(pokemonId: pokemon.id)
+       }
+        
+        dataSource.reloadColletionView = { [unowned self] offset in
+            
+            self.fetchPokemon(offset: offset)
+        }
+            
+    }
 }

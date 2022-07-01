@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeInteractorProtocol {
     
-    func fetchPokemon(completion: @escaping PokemonFetchedCompletion)
+    func fetchPokemon(offset: Int?,completion: @escaping PokemonFetchedCompletion)
 }
 
 
@@ -25,8 +25,8 @@ final class HomeInteractor {
 // MARK: - HomeInteractorProtocol
 extension HomeInteractor: HomeInteractorProtocol {
     
-    func fetchPokemon(completion: @escaping PokemonFetchedCompletion) {
+    func fetchPokemon(offset: Int?, completion: @escaping PokemonFetchedCompletion) {
         
-        pokemonManager.fetchPokemon(completion: completion)
+        pokemonManager.fetchPokemon(offset: offset, completion: completion)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 protocol HomeRouterProtocol {
     
     func show(presenter: HomePresenterProtocol) -> HomeViewController
-    
+    func showDetails(pokemonId: String)
 }
 
 
@@ -23,7 +23,7 @@ final class HomeRouter {
 
 // MARK: - HomeRouterProtocol
 extension HomeRouter: HomeRouterProtocol {
-    
+
     func show(presenter: HomePresenterProtocol) -> HomeViewController {
         
         let viewController = HomeViewController(presenter)
@@ -33,5 +33,11 @@ extension HomeRouter: HomeRouterProtocol {
         return viewController
     }
     
+    func showDetails(pokemonId: String) {
+        guard let navigationController = viewControllr?.navigationController else { return }
+        
+        let module = HomeDetailModule(pokemonId: pokemonId)
+        module.show(in: navigationController)
+    }
     
 }
