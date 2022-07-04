@@ -25,13 +25,10 @@ class PokemonDetailsViewController: UIViewController {
     @IBOutlet private weak var pokemonNextEvolutionSecondImageView: UIImageView!
     
     // ScrollView
-    @IBOutlet weak var stackTypePokemon: UIStackView!
-    @IBOutlet weak var typePokemonLabel: UILabel!
-    @IBOutlet weak var stackAbilityPokemon: UIStackView!
-    @IBOutlet weak var abilityPokemonLabel: UILabel!
+    @IBOutlet weak var colletionTypePokemon: UICollectionView!
     
+    @IBOutlet weak var colletionAbilityPokemon: UICollectionView!
     
-    @IBOutlet weak var scrollViewTypePokemon: UIScrollView!
     
     
     private var loadingView: LoadingView?
@@ -45,19 +42,38 @@ class PokemonDetailsViewController: UIViewController {
         self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
-        
-        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Cycle life
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.setupDelegate(delegate: self)
-        presenter.fetchPokemon()
+        presenter.delegateType = self
+        presenter.delegateAbility = self
+        
+        //ColletionType
+        let layoutType = UICollectionViewFlowLayout()
+        layoutType.minimumInteritemSpacing = 0
+        layoutType.scrollDirection = .horizontal
+        colletionTypePokemon.collectionViewLayout = layoutType
+        colletionTypePokemon.register(.init(nibName: PokemonDetailsCell.identifier, bundle: nil), forCellWithReuseIdentifier: PokemonDetailsCell.identifier)
+
+        colletionTypePokemon.dataSource = presenter.dataSourceType
+        colletionTypePokemon.delegate = presenter.dataSourceType
+        
+        //ColletionAbility
+        let layoutAbility = UICollectionViewFlowLayout()
+        layoutAbility.minimumInteritemSpacing = 0
+        layoutAbility.scrollDirection = .horizontal
+        colletionAbilityPokemon.collectionViewLayout = layoutAbility
+        colletionAbilityPokemon.register(.init(nibName: PokemonDetailsCell.identifier, bundle: nil), forCellWithReuseIdentifier: PokemonDetailsCell.identifier)
+
+        colletionAbilityPokemon.dataSource = presenter.dataSourceAbility
+        colletionAbilityPokemon.delegate = presenter.dataSourceAbility
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,56 +98,38 @@ extension PokemonDetailsViewController: HomeDetailDelegate {
     
     func showDetails(pokemon: PokemonDetailFetched) {
         DispatchQueue.main.async {
-            self.pokemonImageView.image = UIImage(named: "\(pokemon.id)")
-            self.heightPokemonLabel.text = "\(pokemon.height)"
-            self.weightPokemonLabel.text = "\(pokemon.weight)"
-            var minLevelText = ""
-            if let firstEvolution = pokemon.nextEvolution.nextEvolutionId {
-                self.pokemonNextEvolutionFirstImageView.image = UIImage(named: "\(firstEvolution)")
-            } else {
-                self.pokemonNextEvolutionFirstImageView.isHidden = true
-                minLevelText = "Final Evolution"
-            }
-            if let minLevel = pokemon.nextEvolution.minLevel {
-                
-                minLevelText = "Next Evolution: Pokemon LvL: \(minLevel)"
-            }
-            self.pokemonNextEvolutionLvLabel.text = minLevelText
-            if let secondEvolution = pokemon.nextEvolution.nextEvolutionId2 {
-                self.pokemonNextEvolutionSecondImageView.image = UIImage(named: "\(secondEvolution)")
-            } else {
-                self.pokemonNextEvolutionSecondImageView.isHidden = true
-            }
-            self.defensePokemonLabel.text = "\(pokemon.defense)"
-            self.hpPokemonLabel.text = "\(pokemon.hp)"
-            self.pokedexIDLabel.text = "\(pokemon.id)"
-            self.attackPokemonLabel.text = "\(pokemon.baseAttack)"
+        self.pokemonImageView.image = UIImage(named: "\(pokemon.id)")
+        self.heightPokemonLabel.text = "\(pokemon.height)"
+        self.weightPokemonLabel.text = "\(pokemon.weight)"
+        var minLevelText = ""
+        if let firstEvolution = pokemon.nextEvolution.nextEvolutionId {
+            self.pokemonNextEvolutionFirstImageView.image = UIImage(named: "\(firstEvolution)")
+        } else {
+            self.pokemonNextEvolutionFirstImageView.isHidden = true
+            minLevelText = "Final Evolution"
+        }
+        if let minLevel = pokemon.nextEvolution.minLevel {
             
-            // ScrollView Type
-            
-            self.typePokemonLabel.isHidden = true
-
-            for i in 0 ..< pokemon.types.count {
-
-                let type = UILabel()
-                
-                type.text = pokemon.types[i].description.capitalized + (i + 1 < pokemon.types.count ? " /": "")
-                
-                self.stackTypePokemon.addArrangedSubview(type)
-            }
-
-            // ScrollView Ability
-            
-            self.abilityPokemonLabel.isHidden = true
-            
-            for i in 0 ..< pokemon.abilities.count {
-
-                let ability = UILabel()
-                
-                ability.text = pokemon.abilities[i].description.capitalized + (i + 1 < pokemon.abilities.count ? " /": "")
-
-                self.stackAbilityPokemon.addArrangedSubview(ability)
-            }
+            minLevelText = "Next Evolution: Pokemon LvL: \(minLevel)"
+        }
+        self.pokemonNextEvolutionLvLabel.text = minLevelText
+        if let secondEvolution = pokemon.nextEvolution.nextEvolutionId2 {
+            self.pokemonNextEvolutionSecondImageView.image = UIImage(named: "\(secondEvolution)")
+        } else {
+            self.pokemonNextEvolutionSecondImageView.isHidden = true
+        }
+        self.defensePokemonLabel.text = "\(pokemon.defense)"
+        self.hpPokemonLabel.text = "\(pokemon.hp)"
+        self.pokedexIDLabel.text = "\(pokemon.id)"
+        self.attackPokemonLabel.text = "\(pokemon.baseAttack)"
+        
+        // CollectionView Type
+        
+        self.colletionTypePokemon.reloadData()
+        
+        // ScrollView Ability
+        
+        self.colletionAbilityPokemon.reloadData()
         }
     }
 }

@@ -18,6 +18,9 @@ final class HomeDataSource: NSObject {
     func appendPokemones(_ newPokemosnes: [PokemonModel]) {
         pokemones.append(contentsOf: newPokemosnes)
     }
+    func reloadPokemones(_ newPokemosnes: [PokemonModel]) {
+        pokemones = newPokemosnes
+    }
 }
 // MARK: - UICollectionViewDataSource
 extension HomeDataSource: UICollectionViewDataSource {
@@ -59,9 +62,15 @@ extension HomeDataSource: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        if indexPath.item + 1 == pokemones.count{
+        if indexPath.item + 1 == pokemones.count{ // Recargar pokemones nuevos
             let offset = pokemones.count
             
+            reloadColletionView?(offset)
+        }
+        
+        if indexPath.item == 0, pokemones.count > 30 { // Volver a cargar pokemones iniciales
+            
+            let offset = 0
             reloadColletionView?(offset)
         }
     }

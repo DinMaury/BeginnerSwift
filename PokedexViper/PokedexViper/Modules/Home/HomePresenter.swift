@@ -6,8 +6,8 @@
 //
 
 import Foundation
-//MARK: - protocol
 
+//MARK: - protocol
 protocol HomePresenterProtocol {
     
     var dataSource: HomeDataSource { get }
@@ -58,11 +58,26 @@ extension HomePresenter: HomePresenterProtocol {
     func fetchPokemon(offset: Int?) {
         
         delegate?.showLoading()
-        interactor.fetchPokemon(offset: offset) { [weak self] pokemones in
-            self?.delegate?.hideLoading()
-            let pokemonesModel = pokemones.map({ PokemonModel($0)})
-            self?.dataSource.appendPokemones(pokemonesModel)
-            self?.delegate?.reloadData()
+        
+        if offset == 0 {
+            
+            
+            
+            interactor.fetchPokemon(offset: offset) { [weak self] pokemones in
+
+                self?.delegate?.hideLoading()
+                let pokemonesModel = pokemones.map({ PokemonModel($0)})
+                self?.dataSource.reloadPokemones(pokemonesModel)
+                self?.delegate?.reloadData()
+            }
+        } else {
+        
+            interactor.fetchPokemon(offset: offset) { [weak self] pokemones in
+                self?.delegate?.hideLoading()
+                let pokemonesModel = pokemones.map({ PokemonModel($0)})
+                self?.dataSource.appendPokemones(pokemonesModel)
+                self?.delegate?.reloadData()
+            }
         }
     }
 }

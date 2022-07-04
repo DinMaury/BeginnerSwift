@@ -32,7 +32,7 @@ extension PokemonManager: PokemonManagerProtocol {
         
         let offsets = offset ?? 0
         
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=21&offset=\(offsets)") else { return }
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=30&offset=\(offsets)") else { return }
         urlSession.dataTask(with: url) { data, response, error in
             
             guard let data = data else { return }
@@ -58,7 +58,6 @@ extension PokemonManager: PokemonManagerProtocol {
                     
                     let fetched = PokemonDetailFetched(detail: details, nextEvolution: nextEvolution ?? NextEvolution(numEvolution: 0, minLevel: nil, nextEvolutionId: nil, nextEvolutionId2: nil))
                     completion(fetched)
-                    print("")
                 }
             }
         }

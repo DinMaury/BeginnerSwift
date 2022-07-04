@@ -8,7 +8,15 @@
 import UIKit
 
 // MARK: - Protocol
-protocol HomeDetailPresenterProtocol {
+protocol HomeDetailPresenterProtocol { // Variable
+    
+    // dataSource, delegate Type
+    var dataSourceType: HomeDetailDataSourceType { get }
+    var delegateType: HomeDetailDelegate? { get set }
+    
+    // dataSource, delegate Ability
+    var dataSourceAbility: HomeDetailDataSourceAbility { get }
+    var delegateAbility: HomeDetailDelegate? { get set }
     
     func setupDelegate(delegate: HomeDetailDelegate)
     
@@ -28,13 +36,24 @@ final class HomeDetailPresenter {
     // MARK: - Properties
     private let router: HomeDetailRouterProtocol
     private let interactor: HomeDetailInteractorProtocol
-    private weak var delegate: HomeDetailDelegate?
+    
+    // Type
+    var dataSourceType = HomeDetailDataSourceType()
+    
+    weak var delegateType: HomeDetailDelegate?
+    
+    // Ability
+    
+    var dataSourceAbility = HomeDetailDataSourceAbility()
+    
+    weak var delegateAbility: HomeDetailDelegate?
     
     //MARK: - Inits
     init(router: HomeDetailRouterProtocol, interactor: HomeDetailInteractorProtocol) {
         
         self.router = router
         self.interactor = interactor
+        self.fetchPokemon()
     }
 }
 
@@ -43,7 +62,8 @@ final class HomeDetailPresenter {
 extension HomeDetailPresenter: HomeDetailPresenterProtocol {
     
     func setupDelegate(delegate: HomeDetailDelegate) {
-        self.delegate = delegate
+        self.delegateType = delegate
+        self.delegateAbility = delegate
     }
     
     func show(in navigationController: UINavigationController) {
@@ -53,7 +73,11 @@ extension HomeDetailPresenter: HomeDetailPresenterProtocol {
     
     func fetchPokemon() {
         interactor.fetchPokemon() { fetched in
-            self.delegate?.showDetails(pokemon: fetched)
+            self.dataSourceType.appendPokemones(fetched)
+            self.dataSourceAbility.appendPokemones(fetched)
+            self.delegateType?.showDetails(pokemon: fetched)
+            self.delegateAbility?.showDetails(pokemon: fetched)
+            
         }
     }
 }

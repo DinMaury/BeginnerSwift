@@ -10,9 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonDetailsViewController" customModule="PokedexViper" customModuleProvider="target">
             <connections>
-                <outlet property="abilityPokemonLabel" destination="GbS-fc-wI7" id="69F-b2-Pxr"/>
                 <outlet property="attackPokemonLabel" destination="IN6-UK-22O" id="EFB-nA-9sa"/>
                 <outlet property="bioButton" destination="X8t-rX-BOA" id="Twr-0Y-xQd"/>
+                <outlet property="colletionAbilityPokemon" destination="8ZI-A1-Ovm" id="JXe-wW-Ges"/>
+                <outlet property="colletionTypePokemon" destination="pQa-61-pBl" id="plw-Wh-EId"/>
                 <outlet property="defensePokemonLabel" destination="gDn-d5-QF6" id="JIS-hl-7wK"/>
                 <outlet property="heightPokemonLabel" destination="iYi-Ol-l4C" id="bbs-1G-XR4"/>
                 <outlet property="hpPokemonLabel" destination="7nF-f1-jqV" id="huT-C4-tDy"/>
@@ -23,10 +24,6 @@
                 <outlet property="pokemonNextEvolutionFirstImageView" destination="xyi-UR-93A" id="jc8-TO-Ldd"/>
                 <outlet property="pokemonNextEvolutionLvLabel" destination="d1B-ib-p41" id="cMI-7Z-I7q"/>
                 <outlet property="pokemonNextEvolutionSecondImageView" destination="CIK-Q9-2Q9" id="JEo-qE-nYs"/>
-                <outlet property="scrollViewTypePokemon" destination="f5O-Mt-cDy" id="Hn1-zL-KIh"/>
-                <outlet property="stackAbilityPokemon" destination="6bB-P0-fHY" id="e3X-zd-kAk"/>
-                <outlet property="stackTypePokemon" destination="eo8-3h-olo" id="dAJ-xX-w0T"/>
-                <outlet property="typePokemonLabel" destination="lRc-bh-PLA" id="yEP-OC-1SI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weightPokemonLabel" destination="J1H-4u-r3e" id="lI6-NV-Wjg"/>
             </connections>
@@ -120,31 +117,16 @@
                                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5O-Mt-cDy">
+                                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pQa-61-pBl">
                                                                     <rect key="frame" x="47" y="0.0" width="125" height="30"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-3h-olo">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="112.5" height="30"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-bh-PLA">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="30"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstItem="eo8-3h-olo" firstAttribute="trailing" secondItem="whv-Ti-553" secondAttribute="trailing" id="0aN-vM-9cL"/>
-                                                                        <constraint firstItem="whv-Ti-553" firstAttribute="leading" secondItem="eo8-3h-olo" secondAttribute="leading" id="OOD-oe-eVc"/>
-                                                                        <constraint firstItem="whv-Ti-553" firstAttribute="bottom" secondItem="eo8-3h-olo" secondAttribute="bottom" id="Ruw-7k-fgX"/>
-                                                                        <constraint firstItem="eo8-3h-olo" firstAttribute="height" secondItem="lKw-Iy-mcC" secondAttribute="height" id="t3C-W5-dr3"/>
-                                                                        <constraint firstItem="whv-Ti-553" firstAttribute="top" secondItem="eo8-3h-olo" secondAttribute="top" id="v6j-Wm-kbc"/>
-                                                                    </constraints>
-                                                                    <viewLayoutGuide key="contentLayoutGuide" id="whv-Ti-553"/>
-                                                                    <viewLayoutGuide key="frameLayoutGuide" id="lKw-Iy-mcC"/>
-                                                                </scrollView>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sru-qS-1ip">
+                                                                        <size key="itemSize" width="128" height="128"/>
+                                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                    </collectionViewFlowLayout>
+                                                                </collectionView>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fb0-ln-nvQ">
@@ -181,31 +163,16 @@
                                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czg-Dx-66G">
+                                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8ZI-A1-Ovm">
                                                                     <rect key="frame" x="57" y="0.0" width="115" height="30"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6bB-P0-fHY">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-fc-wI7">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstItem="6bB-P0-fHY" firstAttribute="height" secondItem="VCQ-9V-KaW" secondAttribute="height" id="4CL-nR-pn6"/>
-                                                                        <constraint firstItem="ZOx-Tw-xdU" firstAttribute="bottom" secondItem="6bB-P0-fHY" secondAttribute="bottom" id="ES6-sS-5c1"/>
-                                                                        <constraint firstItem="6bB-P0-fHY" firstAttribute="trailing" secondItem="ZOx-Tw-xdU" secondAttribute="trailing" id="Naz-my-Mtx"/>
-                                                                        <constraint firstItem="ZOx-Tw-xdU" firstAttribute="leading" secondItem="6bB-P0-fHY" secondAttribute="leading" id="n97-eg-H2g"/>
-                                                                        <constraint firstItem="ZOx-Tw-xdU" firstAttribute="top" secondItem="6bB-P0-fHY" secondAttribute="top" id="uYB-eI-qXh"/>
-                                                                    </constraints>
-                                                                    <viewLayoutGuide key="contentLayoutGuide" id="ZOx-Tw-xdU"/>
-                                                                    <viewLayoutGuide key="frameLayoutGuide" id="VCQ-9V-KaW"/>
-                                                                </scrollView>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B1W-Zf-yfh">
+                                                                        <size key="itemSize" width="128" height="128"/>
+                                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                    </collectionViewFlowLayout>
+                                                                </collectionView>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ack-79-CTh">

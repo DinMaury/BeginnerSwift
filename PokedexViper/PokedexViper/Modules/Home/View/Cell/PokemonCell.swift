@@ -11,6 +11,7 @@ class PokemonCell: UICollectionViewCell {
 
     @IBOutlet private weak var pokemonImageView: UIImageView!
     @IBOutlet private weak var pokemonNameLabel: UILabel!
+    
     func configure(_ pokemon: PokemonModel) {
         
         pokemonNameLabel.text = pokemon.name
