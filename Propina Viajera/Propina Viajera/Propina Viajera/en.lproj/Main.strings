@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "EUR 0.00"; ObjectID = "1f8-Gx-Nal"; */
+"1f8-Gx-Nal.text" = "EUR 0.00";
+
+/* Class = "UILabel"; text = "Total: "; ObjectID = "3Ue-Kr-ypq"; */
+"3Ue-Kr-ypq.text" = "Total: ";
+
+/* Class = "UILabel"; text = "Your tip percentage"; ObjectID = "Cxm-75-erw"; */
+"Cxm-75-erw.text" = "Your tip percentage";
+
+/* Class = "UITextField"; placeholder = "E 0.00"; ObjectID = "IE6-fu-GPX"; */
+"IE6-fu-GPX.placeholder" = "E 0.00";
+
+/* Class = "UILabel"; text = "Tip"; ObjectID = "Wsk-Zm-jNc"; */
+"Wsk-Zm-jNc.text" = "Tip";
+
+/* Class = "UINavigationItem"; title = "Traveller Tip"; ObjectID = "Xht-PQ-X2C"; */
+"Xht-PQ-X2C.title" = "Traveller Tip";
+
+/* Class = "UILabel"; text = "Introduce your bill"; ObjectID = "ZeM-4k-sKH"; */
+"ZeM-4k-sKH.text" = "Introduce your bill";
+
+/* Class = "UISegmentedControl"; gxc-rj-PzX.segmentTitles[0] = "5%"; ObjectID = "gxc-rj-PzX"; */
+"gxc-rj-PzX.segmentTitles[0]" = "5%";
+
+/* Class = "UISegmentedControl"; gxc-rj-PzX.segmentTitles[1] = "10%"; ObjectID = "gxc-rj-PzX"; */
+"gxc-rj-PzX.segmentTitles[1]" = "10%";
+
+/* Class = "UISegmentedControl"; gxc-rj-PzX.segmentTitles[2] = "15%"; ObjectID = "gxc-rj-PzX"; */
+"gxc-rj-PzX.segmentTitles[2]" = "15%";
+
+/* Class = "UISegmentedControl"; gxc-rj-PzX.segmentTitles[3] = "20%"; ObjectID = "gxc-rj-PzX"; */
+"gxc-rj-PzX.segmentTitles[3]" = "20%";
+
+/* Class = "UILabel"; text = "How much is it?"; ObjectID = "hab-k9-BxM"; */
+"hab-k9-BxM.text" = "How much is it?";
+
+/* Class = "UILabel"; text = "E 0.00"; ObjectID = "kT4-PG-3h3"; */
+"kT4-PG-3h3.text" = "E 0.00";
+
+/* Class = "UILabel"; text = "E 0.00"; ObjectID = "moS-A3-ekq"; */
+"moS-A3-ekq.text" = "E 0.00";

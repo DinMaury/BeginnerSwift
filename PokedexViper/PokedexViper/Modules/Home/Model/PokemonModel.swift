@@ -20,6 +20,7 @@ final class PokemonModel {
         if let last = chars.last {
             id = String(last)
         }
+        
         self.id = id
         self.name = pokemon.name
         self.urlString = pokemon.url

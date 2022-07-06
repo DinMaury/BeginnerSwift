@@ -85,7 +85,7 @@ extension HomeViewController: HomePresenterDelegate {
     
     func reloadDataColletionView(indexPath: IndexPath) {
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { //Llamar hilo principal
             
             self.colletionView.reloadItems(at: [indexPath])
         }
